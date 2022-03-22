@@ -1,0 +1,20 @@
+{
+  "name": "_name_",
+  "assignmentIds": [
+    "h_id_"
+  ],
+  "sourceSets": [
+    {
+      "name": "grader",
+      "files": [
+        "h_id_/H_id__RubricProvider.java"
+      ]
+    },
+    {
+      "name": "solution",
+      "files": [
+        "h_id_/Main.java"
+      ]
+    }
+  ]
+}
