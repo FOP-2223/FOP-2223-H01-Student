@@ -1,9 +1,7 @@
-import org.sourcegrade.submitter.submit
-
 plugins {
     java
     application
-    id("org.sourcegrade.submitter").version("0.4.0")
+    id("org.sourcegrade.submitter") version "0.5.1"
 }
 
 submit {
@@ -13,6 +11,8 @@ submit {
     lastName = null
     // Optionally require tests for prepareSubmission task. Default is true
     requireTests = true
+    // Optionally require public tests for prepareSubmission task. Default is false
+    requirePublicTests = false
 }
 
 // !! Achtung !!
