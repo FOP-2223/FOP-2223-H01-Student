@@ -24,6 +24,12 @@ repositories {
     mavenCentral()
 }
 
+val publicTest: SourceSet by sourceSets.creating {
+    val test = sourceSets.test.get()
+    compileClasspath += test.output + test.compileClasspath
+    runtimeClasspath += output + test.runtimeClasspath
+}
+
 dependencies {
     implementation("org.jetbrains:annotations:23.0.0")
     // JUnit only available in "test" source set (./src/test)
@@ -48,6 +54,19 @@ tasks {
         }
         workingDir = runDir
         useJUnitPlatform()
+    }
+    val publicTest by creating(Test::class) {
+        group = "verification"
+        doFirst {
+            runDir.mkdirs()
+        }
+        workingDir = runDir
+        testClassesDirs = publicTest.output.classesDirs
+        classpath = publicTest.compileClasspath + publicTest.runtimeClasspath
+        useJUnitPlatform()
+    }
+    named("check") {
+        dependsOn(publicTest)
     }
     withType<JavaCompile> {
         options.encoding = "UTF-8"
