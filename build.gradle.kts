@@ -14,7 +14,7 @@ repositories {
 }
 
 submit {
-    assignmentId = "h_id_"
+    assignmentId = "h01"
     studentId = "ab12cdef"
     firstName = "sol_first"
     lastName = "sol_last"
@@ -36,7 +36,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("h_id_.Main")
+    mainClass.set("h01.Main")
 }
 
 tasks {
@@ -70,7 +70,7 @@ tasks {
     val graderJar by creating(Jar::class) {
         group = "build"
         afterEvaluate {
-            archiveFileName.set("_name_-${project.version}.jar")
+            archiveFileName.set("FOP-2223-H01-${project.version}.jar")
             from(sourceSets.main.get().allSource)
             from(sourceSets.test.get().allSource)
             from(grader.allSource)
@@ -89,7 +89,7 @@ tasks {
             .map { it.file }
 
         val runtimeDeps = grader.runtimeClasspath.mapNotNull {
-            if (it.path.toLowerCase().contains("h_id_") || jagrRuntime.contains(it)) {
+            if (it.path.toLowerCase().contains("h01") || jagrRuntime.contains(it)) {
                 null
             } else if (it.isDirectory) {
                 it
@@ -98,7 +98,7 @@ tasks {
             }
         }
         from(runtimeDeps)
-        archiveFileName.set("_name_-${project.version}-libs.jar")
+        archiveFileName.set("FOP-2223-H01-${project.version}-libs.jar")
     }
     create("graderAll") {
         group = "build"
