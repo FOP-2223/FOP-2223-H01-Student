@@ -11,6 +11,7 @@ version = "0.1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
 
 submit {
@@ -28,6 +29,8 @@ val grader: SourceSet by sourceSets.creating {
 }
 
 dependencies {
+    implementation("org.tudalgo:fopbot:0.4.0-SNAPSHOT")
+    implementation("org.tudalgo:algoutils-student:0.1.0-SNAPSHOT")
     implementation("org.jetbrains:annotations:23.0.0")
     "graderCompileOnly"("org.sourcegrade:jagr-launcher:0.4.0") {
         exclude("org.jetbrains", "annotations")
