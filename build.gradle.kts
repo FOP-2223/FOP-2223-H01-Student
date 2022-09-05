@@ -1,7 +1,8 @@
+@Suppress("DSL_SCOPE_VIOLATION") // https://youtrack.jetbrains.com/issue/KTIJ-19369
 plugins {
     java
     application
-    id("org.sourcegrade.submitter") version "0.5.1"
+    alias(libs.plugins.submitter)
 }
 
 submit {
@@ -31,9 +32,9 @@ val publicTest: SourceSet by sourceSets.creating {
 }
 
 dependencies {
-    implementation("org.jetbrains:annotations:23.0.0")
+    implementation(libs.annotations)
     // JUnit only available in "test" source set (./src/test)
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    testImplementation(libs.junit)
 }
 
 application {

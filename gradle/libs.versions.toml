@@ -1,0 +1,6 @@
+[libraries]
+annotations = "org.jetbrains:annotations:23.0.0"
+junit = "org.junit.jupiter:junit-jupiter:5.9.0"
+
+[plugins]
+submitter = "org.sourcegrade.submitter:0.5.2"
