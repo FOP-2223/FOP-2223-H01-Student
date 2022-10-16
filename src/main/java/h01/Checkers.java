@@ -69,8 +69,8 @@ public class Checkers {
     public void runGame() {
         World.setVisible(true);
         while (isRunning()) {
-            doBlackTeamAction();
-            doWhiteTeamAction();
+            doBlackTeamActions();
+            doWhiteTeamActions();
             updateGameState();
         }
         System.out.printf("Final State: %s%n", gameState);
@@ -102,14 +102,14 @@ public class Checkers {
     /**
      * Runs the action of the black team.
      */
-    public void doBlackTeamAction() {
+    public void doBlackTeamActions() {
         crash(); // TODO: H2.1 - remove if implemented
     }
 
     /**
      * Runs the action of the white team.
      */
-    public void doWhiteTeamAction() {
+    public void doWhiteTeamActions() {
         crash(); // TODO: H2.2 - remove if implemented
     }
 
