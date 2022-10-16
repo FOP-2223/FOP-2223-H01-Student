@@ -8,6 +8,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import static org.tudalgo.algoutils.student.Student.crash;
 import static org.tudalgo.algoutils.student.io.PropertyUtils.getIntProperty;
 
+/**
+ * {@link Checkers} is a simplified version of Checkers, implemented in FOPBot.
+ */
 public class Checkers {
 
     /**
@@ -47,12 +50,6 @@ public class Checkers {
      * The robots of the black team.
      */
     private Robot blackStone0, blackStone1, blackStone2, blackStone3, blackStone4;
-
-    public static void main(String[] args) {
-        Checkers checkers = new Checkers();
-        checkers.initGame();
-        checkers.runGame();
-    }
 
     /**
      * Runs the initialization of the game.
