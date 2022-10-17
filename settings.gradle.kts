@@ -5,4 +5,12 @@ dependencyResolutionManagement {
     }
 }
 
+pluginManagement {
+    repositories {
+        maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = "_name_-Student"
