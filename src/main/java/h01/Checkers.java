@@ -8,6 +8,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import static org.tudalgo.algoutils.student.Student.crash;
 import static org.tudalgo.algoutils.student.io.PropertyUtils.getIntProperty;
 
+/**
+ * {@link Checkers} is a simplified version of Checkers, implemented in FOPBot.
+ */
 public class Checkers {
 
     /**
@@ -48,12 +51,6 @@ public class Checkers {
      */
     private Robot blackStone0, blackStone1, blackStone2, blackStone3, blackStone4;
 
-    public static void main(String[] args) {
-        Checkers checkers = new Checkers();
-        checkers.initGame();
-        checkers.runGame();
-    }
-
     /**
      * Runs the initialization of the game.
      * The initialization of the game consists of the initialization of the world and all stones.
@@ -72,8 +69,8 @@ public class Checkers {
     public void runGame() {
         World.setVisible(true);
         while (isRunning()) {
-            doBlackTeamAction();
-            doWhiteTeamAction();
+            doBlackTeamActions();
+            doWhiteTeamActions();
             updateGameState();
         }
         System.out.printf("Final State: %s%n", gameState);
@@ -92,35 +89,35 @@ public class Checkers {
      * Runs the initialization of the white stone.
      */
     public void initWhiteStone() {
-        crash(); // TODO: H2.1 - remove if implemented
+        crash(); // TODO: H1.1 - remove if implemented
     }
 
     /**
      * Runs the initialization of all black stones.
      */
     public void initBlackStones() {
-        crash(); // TODO: H2.2 - remove if implemented
+        crash(); // TODO: H1.2 - remove if implemented
     }
 
     /**
      * Runs the action of the black team.
      */
-    public void doBlackTeamAction() {
-        crash(); // TODO: H3.1 - remove if implemented
+    public void doBlackTeamActions() {
+        crash(); // TODO: H2.1 - remove if implemented
     }
 
     /**
      * Runs the action of the white team.
      */
-    public void doWhiteTeamAction() {
-        crash(); // TODO: H3.2 - remove if implemented
+    public void doWhiteTeamActions() {
+        crash(); // TODO: H2.2 - remove if implemented
     }
 
     /**
      * Checks if a team has won the game and, if so, updates the game state to {@link GameState#BLACK_WIN} or {@link GameState#WHITE_WIN}.
      */
     public void updateGameState() {
-        crash(); // TODO: H3.3 - remove if implemented
+        crash(); // TODO: H2.3 - remove if implemented
     }
 
     /**
