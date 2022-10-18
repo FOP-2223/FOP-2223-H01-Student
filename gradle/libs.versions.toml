@@ -1,0 +1,5 @@
+[libraries]
+fopbot = "org.tudalgo:fopbot:0.4.0"
+
+[plugins]
+algomate = "org.tudalgo.algomate:0.1.0-SNAPSHOT"
