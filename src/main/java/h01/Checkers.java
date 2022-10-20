@@ -5,6 +5,7 @@ import fopbot.World;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
+import org.tudalgo.algoutils.student.Student;
 import static org.tudalgo.algoutils.student.Student.crash;
 import static org.tudalgo.algoutils.student.io.PropertyUtils.getIntProperty;
 
@@ -56,6 +57,7 @@ public class Checkers {
      * The initialization of the game consists of the initialization of the world and all stones.
      */
     public void initGame() {
+        Student.setCrashEnabled(false);
         // initialize the world
         World.setSize(NUMBER_OF_COLUMNS, NUMBER_OF_ROWS);
         // initialize all stones
