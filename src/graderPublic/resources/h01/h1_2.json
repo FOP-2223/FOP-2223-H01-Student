@@ -1,0 +1,52 @@
+[
+  {
+    "id": "H1.1/1",
+    "size": {
+      "numberOfRows": 5,
+      "numberOfColumns": 3
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 5,
+      "maxNumberOfCoins": 10
+    },
+    "whiteStonePosition": {
+      "x": 0,
+      "y": 1,
+      "numberOfCoins": 0,
+      "direction": "UP"
+    }
+  },
+  {
+    "id": "H1.1/2",
+    "size": {
+      "numberOfRows": 5,
+      "numberOfColumns": 7
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 5,
+      "maxNumberOfCoins": 10
+    },
+    "whiteStonePosition": {
+      "x": 4,
+      "y": 3,
+      "numberOfCoins": 0,
+      "direction": "LEFT"
+    }
+  },
+  {
+    "size": {
+      "numberOfRows": 13,
+      "numberOfColumns": 3
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 5,
+      "maxNumberOfCoins": 10
+    },
+    "whiteStonePosition": {
+      "x": 1,
+      "y": 8,
+      "numberOfCoins": 0,
+      "direction": "RIGHT"
+    }
+  }
+]

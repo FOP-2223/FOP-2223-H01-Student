@@ -1,0 +1,30 @@
+[
+  {
+    "id": "H1.1/1",
+    "size": {
+      "numberOfColumns": 3,
+      "numberOfRows": 3
+    }
+  },
+  {
+    "id": "H1.1/2",
+    "size": {
+      "numberOfColumns": 5,
+      "numberOfRows": 5
+    }
+  },
+  {
+    "id": "H1.1/3",
+    "size": {
+      "numberOfColumns": 9,
+      "numberOfRows": 3
+    }
+  },
+  {
+    "id": "H1.1/4",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 13
+    }
+  }
+]

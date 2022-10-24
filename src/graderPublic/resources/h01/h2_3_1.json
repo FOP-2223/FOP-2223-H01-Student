@@ -1,0 +1,58 @@
+[
+  {
+    "id": "H2.3/1/1",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 7
+    },
+    "blackStoneToTurnOff": 1,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": false
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 2,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": false
+      },
+      "blackStone1": {
+        "x": 5,
+        "y": 2,
+        "numberOfCoins": 3,
+        "direction": "LEFT",
+        "turnedOn": false
+      },
+      "blackStone2": {
+        "x": 4,
+        "y": 3,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": false
+      },
+      "blackStone3": {
+        "x": 2,
+        "y": 5,
+        "numberOfCoins": 3,
+        "direction": "RIGHT",
+        "turnedOn": false
+      },
+      "blackStone4": {
+        "x": 5,
+        "y": 6,
+        "numberOfCoins": 7,
+        "direction": "RIGHT",
+        "turnedOn": false
+      }
+    }
+  }
+]

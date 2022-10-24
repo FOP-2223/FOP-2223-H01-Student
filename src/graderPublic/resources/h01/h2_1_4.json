@@ -1,0 +1,200 @@
+[
+  {
+    "id": "H2.1/4/1",
+    "size": {
+      "numberOfColumns": 3,
+      "numberOfRows": 5
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "statesBefore": {
+      "whiteStone": {
+        "x": 1,
+        "y": 2,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 0,
+        "y": 1,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 2,
+        "y": 1,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 2,
+        "y": 3,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 0,
+        "y": 3,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 0,
+        "y": 3,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 1,
+        "y": 2,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 0,
+        "numberOfCoins": 0,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 0,
+        "numberOfCoins": 1,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "UP",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.1/4/2",
+    "size": {
+      "numberOfColumns": 3,
+      "numberOfRows": 5
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "statesBefore": {
+      "whiteStone": {
+        "x": 1,
+        "y": 2,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 0,
+        "y": 1,
+        "numberOfCoins": 0,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 2,
+        "y": 1,
+        "numberOfCoins": 1,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 2,
+        "y": 3,
+        "numberOfCoins": 2,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 0,
+        "y": 3,
+        "numberOfCoins": 4,
+        "direction": "LEFT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 1,
+        "y": 2,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 0,
+        "numberOfCoins": 0,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 0,
+        "numberOfCoins": 1,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 0,
+        "y": 3,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "UP",
+        "turnedOn": true
+      }
+    }
+  }
+]
