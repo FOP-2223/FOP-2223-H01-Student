@@ -1,0 +1,802 @@
+[
+  {
+    "id": "H2.2/2/1",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 0,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 2,
+        "y": 3,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 1,
+        "y": 2,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 2,
+        "y": 3,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": false
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.2/2/2",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 1,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 4,
+        "y": 3,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 5,
+        "y": 2,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 4,
+        "y": 3,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": false
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.2/2/3",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 2,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 2,
+        "y": 5,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 1,
+        "y": 6,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 2,
+        "y": 5,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": false
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.2/2/4",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 3,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 4,
+        "y": 5,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 5,
+        "y": 6,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 4,
+        "y": 5,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": false
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.2/2/5",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 1,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 2,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 0,
+        "y": 1,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": false
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.2/2/6",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 2,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 5,
+        "y": 2,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 6,
+        "y": 1,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 5,
+        "y": 2,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": false
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.2/2/7",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 3,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 5,
+        "y": 6,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 6,
+        "y": 7,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 5,
+        "y": 6,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": false
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 6,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    }
+  },
+  {
+    "id": "H2.2/2/8",
+    "size": {
+      "numberOfColumns": 7,
+      "numberOfRows": 9
+    },
+    "numberOfCoins": {
+      "minNumberOfCoins": 1,
+      "maxNumberOfCoins": 5
+    },
+    "blackStoneToTurnOff": 4,
+    "statesBefore": {
+      "whiteStone": {
+        "x": 3,
+        "y": 4,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 6,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      }
+    },
+    "statesAfter": {
+      "whiteStone": {
+        "x": 0,
+        "y": 7,
+        "numberOfCoins": 0,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone0": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 1,
+        "direction": "UP",
+        "turnedOn": true
+      },
+      "blackStone1": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 2,
+        "direction": "LEFT",
+        "turnedOn": true
+      },
+      "blackStone2": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 3,
+        "direction": "DOWN",
+        "turnedOn": true
+      },
+      "blackStone3": {
+        "x": 1,
+        "y": 4,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": true
+      },
+      "blackStone4": {
+        "x": 1,
+        "y": 6,
+        "numberOfCoins": 4,
+        "direction": "RIGHT",
+        "turnedOn": false
+      }
+    }
+  }
+]
