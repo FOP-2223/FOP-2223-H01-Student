@@ -30,7 +30,7 @@ public class H01_RubricProvider implements RubricProvider {
                         "testWhiteStoneInitialDirection"
                     ),
                     criterion(
-                        "Die Anzahl der Münzen des weißen Steins wird pseudozufällig gewählt.",
+                        "Die Anzahl der Münzen des weißen Steins wird korrekt gewählt.",
                         "testWhiteStoneInitialCoins"
                     ),
                     criterion(
