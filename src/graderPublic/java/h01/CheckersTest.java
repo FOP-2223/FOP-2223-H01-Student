@@ -36,6 +36,8 @@ import static org.tudalgo.algoutils.tutor.general.assertions.expected.Nothing.te
 @TestForSubmission
 public class CheckersTest {
 
+    public static final int N = 250;
+
     public static TypeLink LINK = BasicTypeLink.of(CheckersTest.class);
 
     @BeforeAll
@@ -52,7 +54,7 @@ public class CheckersTest {
         var context = contextBuilder().add("id", id).add(context(size)).build();
         int minX = MAX_VALUE, minY = MAX_VALUE, maxX = MIN_VALUE, maxY = MIN_VALUE;
         int tries = 0;
-        while (tries++ < 100 && (minX != 0 || minY != 0 || maxX != size.maxX() || maxY != size.maxY())) {
+        while (tries++ < N && (minX != 0 || minY != 0 || maxX != size.maxX() || maxY != size.maxY())) {
             var game = new CheckersStudent(size.numberOfColumns(), size.numberOfRows(), 5, 5);
             call(game::initWhiteStone, context, r -> "initWhiteStone() resulted in an error");
             var stone = game.getWhiteStone();
@@ -85,7 +87,7 @@ public class CheckersTest {
         var context = contextBuilder().add("id", id).add(context(size)).build();
         var directions = new TreeSet<>();
         int tries = 0;
-        while (tries++ < 100 && directions.size() != Direction.values().length) {
+        while (tries++ < N && directions.size() != Direction.values().length) {
             var game = new CheckersStudent(size.numberOfColumns(), size.numberOfRows(), 5, 5);
             call(game::initWhiteStone, context, r -> "initWhiteStone() resulted in an error");
             var stone = game.getWhiteStone();
@@ -110,7 +112,7 @@ public class CheckersTest {
         var context = contextBuilder().add("id", id).add(context(size)).build();
         int tries = 0;
         var numbers = new TreeSet<>();
-        while (tries++ < 100) {
+        while (tries++ < N) {
             var game = new CheckersStudent(size.numberOfColumns(), size.numberOfRows(), 5, 5);
             call(game::initWhiteStone, context, r -> "initWhiteStone() resulted in an error");
             var stone = game.getWhiteStone();
@@ -143,7 +145,7 @@ public class CheckersTest {
             int n = i;
             int minX = MAX_VALUE, minY = MAX_VALUE, maxX = MIN_VALUE, maxY = MIN_VALUE;
             int tries = 0;
-            while (tries++ < 100 && (minX != 0 || minY != 0 || maxX != size.maxX() || maxY != size.maxY())) {
+            while (tries++ < N && (minX != 0 || minY != 0 || maxX != size.maxX() || maxY != size.maxY())) {
                 var game = new CheckersStudent(size.numberOfColumns(), size.numberOfRows(), 5, 5);
                 game.setWhiteStone(new Robot(whiteStonePosition.x(), whiteStonePosition.y(), UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
@@ -218,7 +220,7 @@ public class CheckersTest {
             int n = i;
             var directions = new TreeSet<>();
             int tries = 0;
-            while (tries++ < 100 && directions.size() != Direction.values().length) {
+            while (tries++ < N && directions.size() != Direction.values().length) {
                 var game = new CheckersStudent(5, 5, 5, 5);
                 game.setWhiteStone(new Robot(1, 2, UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
@@ -281,7 +283,7 @@ public class CheckersTest {
             .add(context(statesBefore))
             .build();
         var selectedRobots = new TreeSet<Integer>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < N; i++) {
             var game = new CheckersStudent(size.w(), size.h(), numberOfCoins.min(), numberOfCoins.max());
             game.init(statesBefore);
             var tracker = game.blackStoneTracker(context);
@@ -311,7 +313,7 @@ public class CheckersTest {
             .add(context(size))
             .add(context(statesBefore))
             .build();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < N; i++) {
             var game = new CheckersStudent(size.w(), size.h(), numberOfCoins.min(), numberOfCoins.max());
             game.init(statesBefore);
             var tracker = game.blackStoneTracker(context);
@@ -342,7 +344,7 @@ public class CheckersTest {
             .add(context(size))
             .add(context(statesBefore))
             .build();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < N; i++) {
             var game = new CheckersStudent(size.w(), size.h(), numberOfCoins.min(), numberOfCoins.max());
             game.init(statesBefore);
             var tracker = game.blackStoneTracker(context);
@@ -397,7 +399,7 @@ public class CheckersTest {
             .add(context(size))
             .add(context(statesBefore))
             .build();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < N; i++) {
             var game = new CheckersStudent(size.w(), size.h(), numberOfCoins.min(), numberOfCoins.max());
             game.init(statesBefore);
             var tracker = game.blackStoneTracker(context);
@@ -428,7 +430,7 @@ public class CheckersTest {
             .add(context(size))
             .add(context(statesBefore))
             .build();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < N; i++) {
             var game = new CheckersStudent(size.w(), size.h(), numberOfCoins.min(), numberOfCoins.max());
             game.init(statesBefore);
             call(game::doWhiteTeamActions, context, r -> "doBlackTeamActions() resulted in an error");
@@ -488,7 +490,7 @@ public class CheckersTest {
         int numberOfTurnedOffBlackStones
     ) {
         var context = contextBuilder().add("id", test).add(context(size, statesBefore)).build();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < N; i++) {
             var game = new CheckersStudent(size.w(), size.h(), numberOfCoins.min(), numberOfCoins.max());
             game.init(statesBefore);
             call(game::doWhiteTeamActions, context, r -> "doWhiteTeamActions() resulted in an error");
