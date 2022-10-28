@@ -4,6 +4,12 @@ import fopbot.Robot;
 import fopbot.RobotFamily;
 import fopbot.RobotTrace;
 import fopbot.World;
+import org.tudalgo.algoutils.student.io.PropertyUtils;
+import org.tudalgo.algoutils.tutor.general.assertions.Context;
+import org.tudalgo.algoutils.tutor.general.match.Matcher;
+import org.tudalgo.algoutils.tutor.general.reflections.BasicTypeLink;
+import org.tudalgo.algoutils.tutor.general.reflections.FieldLink;
+import org.tudalgo.algoutils.tutor.general.reflections.TypeLink;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -11,12 +17,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import org.tudalgo.algoutils.student.io.PropertyUtils;
-import org.tudalgo.algoutils.tutor.general.assertions.Context;
-import org.tudalgo.algoutils.tutor.general.match.Matcher;
-import org.tudalgo.algoutils.tutor.general.reflections.BasicTypeLink;
-import org.tudalgo.algoutils.tutor.general.reflections.FieldLink;
-import org.tudalgo.algoutils.tutor.general.reflections.TypeLink;
+
 import static fopbot.RobotFamily.SQUARE_WHITE;
 import static java.lang.String.format;
 import static java.util.Arrays.stream;
@@ -200,5 +201,4 @@ public class CheckersStudent {
         MAX_NUMBER_OF_COINS.set(instance, maxNumberOfCoins);
         World.setSize(numberOfColumns, numberOfRows);
     }
-
 }
