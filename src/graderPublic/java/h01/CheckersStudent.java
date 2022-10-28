@@ -13,6 +13,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import org.tudalgo.algoutils.student.io.PropertyUtils;
 import org.tudalgo.algoutils.tutor.general.assertions.Context;
+import org.tudalgo.algoutils.tutor.general.match.Matcher;
 import org.tudalgo.algoutils.tutor.general.reflections.BasicTypeLink;
 import org.tudalgo.algoutils.tutor.general.reflections.FieldLink;
 import org.tudalgo.algoutils.tutor.general.reflections.TypeLink;
@@ -29,6 +30,7 @@ public class CheckersStudent {
     private static final TypeLink type;
     private static final FieldLink whiteStoneLink;
     private static final FieldLink[] blackStoneLinks;
+    private static final FieldLink blackStoneArrayLink;
     private static final FieldLink NUMBER_OF_ROWS;
     private static final FieldLink NUMBER_OF_COLUMNS;
     private static final FieldLink MIN_NUMBER_OF_COINS;
@@ -39,13 +41,14 @@ public class CheckersStudent {
         properties = PropertyUtils.getProperties("checkers.properties");
         type = BasicTypeLink.of(Checkers.class);
         whiteStoneLink = type.getField(identical("whiteStone"));
-        blackStoneLinks = new FieldLink[] {
+        blackStoneLinks = new FieldLink[]{
             type.getField(identical("blackStone0")),
             type.getField(identical("blackStone1")),
             type.getField(identical("blackStone2")),
             type.getField(identical("blackStone3")),
             type.getField(identical("blackStone4"))
         };
+        blackStoneArrayLink = type.getField(Matcher.of(l -> l.getType() == Robot[].class));
         NUMBER_OF_ROWS = type.getField(identical("NUMBER_OF_ROWS"));
         NUMBER_OF_COLUMNS = type.getField(identical("NUMBER_OF_COLUMNS"));
         MIN_NUMBER_OF_COINS = type.getField(identical("MIN_NUMBER_OF_COINS"));
@@ -107,11 +110,24 @@ public class CheckersStudent {
     }
 
     public void setBlackStone(int i, Robot robot) {
-        blackStoneLinks[i].set(instance, robot);
+        if (blackStoneArrayLink != null) {
+            var array = blackStoneArrayLink.get(instance);
+            if (array == null) {
+                array = new Robot[5];
+                blackStoneArrayLink.set(instance, array);
+            }
+            ((Robot[]) array)[i] = robot;
+        } else {
+            blackStoneLinks[i].set(instance, robot);
+        }
     }
 
     public Robot[] getBlackStones() {
-        return stream(blackStoneLinks).map(link -> link.<Robot>get(instance)).toArray(Robot[]::new);
+        if (blackStoneArrayLink != null) {
+            return blackStoneArrayLink.get(instance);
+        } else {
+            return stream(blackStoneLinks).map(blackStoneLink -> blackStoneLink.get(instance)).toArray(Robot[]::new);
+        }
     }
 
     public StoneStates getStoneStates() {
