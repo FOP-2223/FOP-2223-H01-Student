@@ -4,8 +4,6 @@ import fopbot.Direction;
 import fopbot.Robot;
 import fopbot.Transition;
 import fopbot.World;
-
-import java.util.TreeSet;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -14,6 +12,9 @@ import org.junitpioneer.jupiter.json.Property;
 import org.sourcegrade.jagr.api.rubric.TestForSubmission;
 import org.tudalgo.algoutils.tutor.general.reflections.BasicTypeLink;
 import org.tudalgo.algoutils.tutor.general.reflections.TypeLink;
+
+import java.util.TreeSet;
+
 import static fopbot.Direction.UP;
 import static fopbot.RobotFamily.SQUARE_WHITE;
 import static fopbot.World.getGlobalWorld;
@@ -23,12 +24,7 @@ import static java.lang.String.format;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 import static java.util.stream.IntStream.rangeClosed;
-import static org.tudalgo.algoutils.tutor.general.assertions.Assertions2.assertEquals;
-import static org.tudalgo.algoutils.tutor.general.assertions.Assertions2.call;
-import static org.tudalgo.algoutils.tutor.general.assertions.Assertions2.context;
-import static org.tudalgo.algoutils.tutor.general.assertions.Assertions2.contextBuilder;
-import static org.tudalgo.algoutils.tutor.general.assertions.Assertions2.emptyContext;
-import static org.tudalgo.algoutils.tutor.general.assertions.Assertions2.fail;
+import static org.tudalgo.algoutils.tutor.general.assertions.Assertions2.*;
 import static org.tudalgo.algoutils.tutor.general.assertions.expected.Nothing.items;
 import static org.tudalgo.algoutils.tutor.general.assertions.expected.Nothing.text;
 
@@ -57,7 +53,7 @@ public class CheckersTest {
         while (tries++ < N && (minX != 0 || minY != 0 || maxX != size.maxX() || maxY != size.maxY())) {
             var game = new CheckersStudent(size.numberOfColumns(), size.numberOfRows(), 5, 5);
             call(game::initWhiteStone, context, r -> "initWhiteStone() resulted in an error");
-            var stone = game.getWhiteStone();
+            var stone = assertCallNotNull(game::getWhiteStone, context, r -> "white stone is null after initialization");
             // check if sum of x and y is odd
             if ((stone.getX() + stone.getY()) % 2 != 1) {
                 fail(
@@ -90,7 +86,7 @@ public class CheckersTest {
         while (tries++ < N && directions.size() != Direction.values().length) {
             var game = new CheckersStudent(size.numberOfColumns(), size.numberOfRows(), 5, 5);
             call(game::initWhiteStone, context, r -> "initWhiteStone() resulted in an error");
-            var stone = game.getWhiteStone();
+            var stone = assertCallNotNull(game::getWhiteStone, context, r -> "white stone is null after initialization");
             directions.add(stone.getDirection());
         }
         if (directions.size() != Direction.values().length) {
@@ -115,7 +111,7 @@ public class CheckersTest {
         while (tries++ < N) {
             var game = new CheckersStudent(size.numberOfColumns(), size.numberOfRows(), 5, 5);
             call(game::initWhiteStone, context, r -> "initWhiteStone() resulted in an error");
-            var stone = game.getWhiteStone();
+            var stone = assertCallNotNull(game::getWhiteStone, context, r -> "white stone is null after initialization");
             numbers.add(stone.getNumberOfCoins());
         }
         if (!numbers.contains(0) || numbers.size() > 1) {
@@ -150,6 +146,7 @@ public class CheckersTest {
                 game.setWhiteStone(new Robot(whiteStonePosition.x(), whiteStonePosition.y(), UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
                 var stones = game.getBlackStones();
+                assertCallNotNull(() -> stones[n], context, r -> format("black stone %s is null after initialization", n));
                 if ((stones[n].getX() + stones[n].getY()) % 2 != 1) {
                     fail(
                         text("odd sum"),
@@ -200,6 +197,7 @@ public class CheckersTest {
                 game.setWhiteStone(new Robot(whiteStonePosition.x(), whiteStonePosition.y(), UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
                 var stones = game.getBlackStones();
+                assertCallNotNull(() -> stones[n], context, r -> format("black stone %s is null after initialization", n));
                 if (stones[n].getX() == whiteStonePosition.x() && stones[n].getY() == whiteStonePosition.y()) {
                     fail(
                         text("different positions"),
@@ -225,6 +223,7 @@ public class CheckersTest {
                 game.setWhiteStone(new Robot(1, 2, UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
                 var stones = game.getBlackStones();
+                assertCallNotNull(() -> stones[n], context, r -> format("black stone %s is null after initialization", n));
                 directions.add(stones[n].getDirection());
             }
             if (directions.size() != Direction.values().length) {
@@ -258,6 +257,7 @@ public class CheckersTest {
                 game.setWhiteStone(new Robot(1, 2, UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
                 var stone = game.getBlackStones()[i];
+                assertCallNotNull(() -> stone, context, r -> format("black stone %s is null after initialization", n));
                 coinNumbers.add(stone.getNumberOfCoins());
             }
             assertEquals(
