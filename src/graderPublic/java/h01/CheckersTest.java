@@ -146,6 +146,7 @@ public class CheckersTest {
                 game.setWhiteStone(new Robot(whiteStonePosition.x(), whiteStonePosition.y(), UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
                 var stones = game.getBlackStones();
+                assertCallNotNull(() -> stones, context, r -> format("black stone array is null after initialization"));
                 assertCallNotNull(() -> stones[n], context, r -> format("black stone %s is null after initialization", n));
                 if ((stones[n].getX() + stones[n].getY()) % 2 != 1) {
                     fail(
@@ -197,6 +198,7 @@ public class CheckersTest {
                 game.setWhiteStone(new Robot(whiteStonePosition.x(), whiteStonePosition.y(), UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
                 var stones = game.getBlackStones();
+                assertCallNotNull(() -> stones, context, r -> format("black stone array is null after initialization"));
                 assertCallNotNull(() -> stones[n], context, r -> format("black stone %s is null after initialization", n));
                 if (stones[n].getX() == whiteStonePosition.x() && stones[n].getY() == whiteStonePosition.y()) {
                     fail(
@@ -223,6 +225,7 @@ public class CheckersTest {
                 game.setWhiteStone(new Robot(1, 2, UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
                 var stones = game.getBlackStones();
+                assertCallNotNull(() -> stones, context, r -> format("black stone array is null after initialization"));
                 assertCallNotNull(() -> stones[n], context, r -> format("black stone %s is null after initialization", n));
                 directions.add(stones[n].getDirection());
             }
@@ -256,9 +259,10 @@ public class CheckersTest {
                 var game = new CheckersStudent(5, 5, numberOfCoins.min(), numberOfCoins.max());
                 game.setWhiteStone(new Robot(1, 2, UP, 0, SQUARE_WHITE));
                 call(game::initBlackStones, context, r -> "initBlackStone() resulted in an error");
-                var stone = game.getBlackStones()[i];
-                assertCallNotNull(() -> stone, context, r -> format("black stone %s is null after initialization", n));
-                coinNumbers.add(stone.getNumberOfCoins());
+                var stones = game.getBlackStones();
+                assertCallNotNull(() -> stones, context, r -> format("black stone array is null after initialization"));
+                assertCallNotNull(() -> stones[n], context, r -> format("black stone %s is null after initialization", n));
+                coinNumbers.add(stones[n].getNumberOfCoins());
             }
             assertEquals(
                 expectedCoinNumbers,
