@@ -31,7 +31,7 @@ public class CheckersStudent {
     private static final TypeLink type;
     private static final FieldLink whiteStoneLink;
     private static final FieldLink[] blackStoneLinks;
-    private static final FieldLink blackStoneArrayLink;
+    private static FieldLink blackStoneArrayLink;
     private static final FieldLink NUMBER_OF_ROWS;
     private static final FieldLink NUMBER_OF_COLUMNS;
     private static final FieldLink MIN_NUMBER_OF_COINS;
@@ -49,7 +49,10 @@ public class CheckersStudent {
             type.getField(identical("blackStone3")),
             type.getField(identical("blackStone4"))
         };
-        blackStoneArrayLink = type.getField(Matcher.of(l -> l.getType() == Robot[].class));
+        blackStoneArrayLink = type.getField(Matcher.of(l -> l.link().getType() == Robot[].class));
+        if (blackStoneArrayLink.link().getType() != Robot[].class) {
+            blackStoneArrayLink = null;
+        }
         NUMBER_OF_ROWS = type.getField(identical("NUMBER_OF_ROWS"));
         NUMBER_OF_COLUMNS = type.getField(identical("NUMBER_OF_COLUMNS"));
         MIN_NUMBER_OF_COINS = type.getField(identical("MIN_NUMBER_OF_COINS"));
