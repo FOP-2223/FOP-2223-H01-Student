@@ -2,4 +2,4 @@
 fopbot = "org.tudalgo:fopbot:0.4.1"
 
 [plugins]
-algomate = "org.tudalgo.algomate:0.2.1"
+algomate = "org.tudalgo.algomate:0.3.0"
